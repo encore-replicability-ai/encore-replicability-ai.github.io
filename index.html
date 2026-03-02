@@ -295,6 +295,36 @@ r <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>
       padding: 2px 6px;
       border-radius: 7px;
     }
+
+    .schedule-table{
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: #fff;
+    }
+    .schedule-table th,
+    .schedule-table td{
+      padding: 12px 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      text-align: left;
+    }
+    .schedule-table th{
+      font-size: 0.86rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: var(--surface);
+    }
+    .schedule-table tr:last-child td{ border-bottom: 0; }
+    .time-range{
+      font-family: var(--mono);
+      font-size: 0.92rem;
+      color: var(--text);
+      white-space: nowrap;
+    }
   </style>
 </head>
 
@@ -313,6 +343,7 @@ r <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>
       <nav aria-label="Primary">
         <ul>
           <li><a href="#overview">Overview</a></li>
+          <li><a href="#schedule">Schedule</a></li>
           <li><a href="#organizers">Organizing Committee</a></li>
           <li><a href="#participants">List of Participants</a></li>
         </ul>
@@ -394,6 +425,105 @@ r <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>
       </div>
     </section>
 
+    <!-- SCHEDULE -->
+    <section id="schedule" aria-label="Schedule">
+      <h2>Schedule</h2>
+
+      <div class="card section-card">
+        <h3 style="margin:0 0 10px;">Wednesday, April 8</h3>
+        <table class="schedule-table" aria-label="Wednesday schedule">
+          <thead>
+            <tr>
+              <th style="width: 210px;">Time</th>
+              <th>Activity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="time-range">8:15–9:00</td>
+              <td>Breakfast</td>
+            </tr>
+            <tr>
+              <td class="time-range">9:00–12:30</td>
+              <td>Talks (TBD)</td>
+            </tr>
+            <tr>
+              <td class="time-range">14:00–15:30</td>
+              <td>Problem Solving Session 1</td>
+            </tr>
+            <tr>
+              <td class="time-range">16:00–17:30</td>
+              <td>Problem Solving Session 2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card section-card" style="margin-top: 12px;">
+        <h3 style="margin:0 0 10px;">Thursday, April 9</h3>
+        <table class="schedule-table" aria-label="Thursday schedule">
+          <thead>
+            <tr>
+              <th style="width: 210px;">Time</th>
+              <th>Activity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="time-range">8:15–9:00</td>
+              <td>Breakfast</td>
+            </tr>
+            <tr>
+              <td class="time-range">9:00–12:30</td>
+              <td>Talks (TBD)</td>
+            </tr>
+            <tr>
+              <td class="time-range">14:00–15:30</td>
+              <td>Problem Solving Session 1</td>
+            </tr>
+            <tr>
+              <td class="time-range">16:00–17:30</td>
+              <td>Problem Solving Session 2</td>
+            </tr>
+            <tr>
+              <td class="time-range">Evening</td>
+              <td>Workshop Dinner</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card section-card" style="margin-top: 12px;">
+        <h3 style="margin:0 0 10px;">Friday, April 10</h3>
+        <table class="schedule-table" aria-label="Friday schedule">
+          <thead>
+            <tr>
+              <th style="width: 210px;">Time</th>
+              <th>Activity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="time-range">8:15–9:00</td>
+              <td>Breakfast</td>
+            </tr>
+            <tr>
+              <td class="time-range">9:00–12:30</td>
+              <td>Talks (TBD)</td>
+            </tr>
+            <tr>
+              <td class="time-range">14:00–15:30</td>
+              <td>Open Problem Progress Report</td>
+            </tr>
+            <tr>
+              <td class="time-range">16:00–17:30</td>
+              <td>Problem Solving Session</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
     <!-- ORGANIZERS -->
     <section id="organizers" aria-label="Organizing committee">
       <h2>Organizing Committee</h2>
@@ -438,7 +568,22 @@ r <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>
       <h2>List of Participants</h2>
       <div class="card section-card">
         <div class="list-grid" role="list">
-          <div class="person" role="listitem"><div><strong>TBD</strong><span></span></div></div>
+          <div class="person" role="listitem"><div><strong>Max Hopkins</strong><span>Institute for Advanced Study</span></div></div>
+          <div class="person" role="listitem"><div><strong>Grzegorz Głuch</strong><span>Massachusetts Institute of Technology</span></div></div>
+          <div class="person" role="listitem"><div><strong>Amin Karbasi</strong><span>Cisco Foundation AI</span></div></div>
+          <div class="person" role="listitem"><div><strong>Omar Montasser</strong><span>Yale University</span></div></div>
+          <div class="person" role="listitem"><div><strong>Mahdi Haghifam</strong><span>Toyota Technological Institute at Chicago</span></div></div>
+          <div class="person" role="listitem"><div><strong>Adam Richard Klivans</strong><span>The University of Texas at Austin</span></div></div>
+          <div class="person" role="listitem"><div><strong>Raghu Meka</strong><span>University of California, Los Angeles</span></div></div>
+          <div class="person" role="listitem"><div><strong>Mark Bun</strong><span>Boston University</span></div></div>
+          <div class="person" role="listitem"><div><strong>Justin Chen</strong><span>Massachusetts Institute of Technology</span></div></div>
+          <div class="person" role="listitem"><div><strong>Satchit Sivakumar</strong><span>Boston University</span></div></div>
+          <div class="person" role="listitem"><div><strong>Ilias Diakonikolas</strong><span>University of Wisconsin–Madison</span></div></div>
+          <div class="person" role="listitem"><div><strong>David Woodruff</strong><span>Carnegie Mellon University</span></div></div>
+          <div class="person" role="listitem"><div><strong>Sihan Liu</strong><span>University of California San Diego</span></div></div>
+          <div class="person" role="listitem"><div><strong>Chris Harshaw</strong><span>Columbia University</span></div></div>
+          <div class="person" role="listitem"><div><strong>Manolis Zampetakis</strong><span>Yale University</span></div></div>
+          <div class="person" role="listitem"><div><strong>Grigoris Velegkas</strong><span>Google Research</span></div></div>
         </div>
 
       </div>
