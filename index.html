@@ -73,13 +73,6 @@ r <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>
       gap: 10px;
       min-width: 240px;
     }
-    .logo {
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      background: radial-gradient(120% 120% at 20% 20%, var(--accent-2), var(--accent));
-      box-shadow: 0 10px 24px rgba(31, 111, 235, 0.18);
-    }
     .brand-title {
       display: flex;
       flex-direction: column;
@@ -97,10 +90,10 @@ r <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>
     nav ul{
       list-style: none;
       display: flex;
-      gap: 14px;
+      gap: 4px;
       padding: 0;
       margin: 0;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: flex-end;
     }
     nav a{
@@ -267,6 +260,36 @@ r <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>
       margin-top: 2px;
     }
 
+    .encore-badge {
+      display: block;
+      margin: 0 0 14px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.01em;
+    }
+
+    .sponsors {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .sponsors-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 20px 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .sponsors-inner p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: var(--muted);
+      flex: 1;
+      min-width: 240px;
+    }
+
     footer{
       border-top: 1px solid var(--border);
       background: #fff;
@@ -334,18 +357,21 @@ r <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>
   <header>
     <div class="nav">
       <div class="brand" aria-label="Workshop home">
+        <a href="https://encore.ucsd.edu/" target="_blank" rel="noopener noreferrer">
+          <img src="https://encore.ucsd.edu/wp-content/uploads/2022/02/Encore-logo.png" alt="EnCORE Institute" style="height:32px;width:auto;display:block;">
+        </a>
         <div class="brand-title">
           <strong>Foundations of Replicability and Verifiability in AI</strong>
-          <span>Workshop • April 8-10, 2026</span>
+          <span>An EnCORE Workshop</span>
         </div>
       </div>
 
       <nav aria-label="Primary">
         <ul>
           <li><a href="#overview">Overview</a></li>
-          <li><a href="#schedule">Tentative Schedule</a></li>
-          <li><a href="#organizers">Organizing Committee</a></li>
-          <li><a href="#participants">List of Participants</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#organizers">Organizers</a></li>
+          <li><a href="#participants">Participants</a></li>
         </ul>
       </nav>
     </div>
@@ -353,6 +379,7 @@ r <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>
 
   <div class="hero">
     <div>
+      <p class="encore-badge">An EnCORE Institute Workshop</p>
       <h1>Foundations of Replicability and Verifiability in AI</h1>
       <p class="lede">
         A workshop bringing together theory, methodology, and practice to build conceptual foundations
@@ -373,7 +400,7 @@ r <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>
           </div>
           <div class="meta-item">
             <dt>Support</dt>
-            <dd>Supported by UCSD and Google Research</dd>
+            <dd>EnCORE Institute and Google Research</dd>
           </div>
         </dl>
       </div>
@@ -400,13 +427,15 @@ r <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>
             theoretical advances into dependable real-world systems.
           </p>
           <p>
-            Recent theoretical progress has begun to formalize replicable algorithm design—a concept introduced by
-            Impagliazzo, Lei, Pitassi, and Sorrell (STOC 2022)—as a mathematical foundation for reproducibility. This
-            notion provides a rigorous framework for understanding when an algorithm consistently produces the same
-            output under independent sampling, even in randomized or high-dimensional settings. Follow-up studies have
-            linked replicability to privacy, adaptive generalization, and algorithmic stability, revealing deep
-            structural connections and open challenges in designing provably replicable algorithms for learning and
-            optimization.
+            Recent theoretical progress has begun to formalize replicable algorithm design as a property of algorithms
+            themselves. This line of work builds on earlier notions such as pseudodeterministic algorithms, introduced
+            in Gat and Goldwasser (ECCC 2011), which study randomized algorithms that produce canonical
+            outputs despite internal randomness. More recent work by Impagliazzo, Lei, Pitassi, and Sorrell (STOC 2022)
+            extends these ideas to the setting of learning and statistics, providing a rigorous framework for
+            understanding when an algorithm consistently produces the same output under independent sampling, even in
+            randomized or high-dimensional settings. Follow-up studies have linked replicability to privacy, adaptive
+            generalization, and algorithmic stability, revealing deep structural connections and open challenges in
+            designing provably replicable algorithms for learning and optimization.
           </p>
           <p>
             This workshop aims to bridge theoretical advances and practical reproducibility tools, uniting algorithm
@@ -591,32 +620,56 @@ r <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>
           <div class="person" role="listitem"><div><strong>Vitaly Feldman</strong><span>Apple</span></div></div>
           <div class="person" role="listitem"><div><strong>Shafi Goldwasser</strong><span>Massachusetts Institute of Technology</span></div></div>
           <div class="person" role="listitem"><div><strong>David Woodruff</strong><span>Carnegie Mellon University</span></div></div>
+
           <div class="person" role="listitem"><div><strong>Mark Bun</strong><span>Boston University</span></div></div>
           <div class="person" role="listitem"><div><strong>Adam Richard Klivans</strong><span>The University of Texas at Austin</span></div></div>
           <div class="person" role="listitem"><div><strong>Ilias Diakonikolas</strong><span>University of Wisconsin–Madison</span></div></div>
+
+          <div class="person" role="listitem"><div><strong>Peyman Jabbarzade</strong><span>University of Maryland, College Park</span></div></div>
           <div class="person" role="listitem"><div><strong>Amin Karbasi</strong><span>Cisco Foundation AI</span></div></div>
           <div class="person" role="listitem"><div><strong>Raghu Meka</strong><span>University of California, Los Angeles</span></div></div>
+
+          <div class="person" role="listitem"><div><strong>Arshia Soltani</strong><span>University of Maryland, College Park</span></div></div>
           <div class="person" role="listitem"><div><strong>Manolis Zampetakis</strong><span>Yale University</span></div></div>
           <div class="person" role="listitem"><div><strong>Gautam Kamath</strong><span>University of Waterloo</span></div></div>
+
+          <div class="person" role="listitem"><div><strong>Danny Mittal</strong><span>University of Maryland, College Park</span></div></div>
           <div class="person" role="listitem"><div><strong>Mahdi Haghifam</strong><span>Toyota Technological Institute at Chicago</span></div></div>
           <div class="person" role="listitem"><div><strong>Max Hopkins</strong><span>Institute for Advanced Study</span></div></div>
+
           <div class="person" role="listitem"><div><strong>Omar Montasser</strong><span>Yale University</span></div></div>
-          <div class="person" role="listitem"><div><strong>Anay Mehrotra </strong><span>Stanford</span></div></div>
+          <div class="person" role="listitem"><div><strong>Anay Mehrotra</strong><span>Stanford University</span></div></div>
           <div class="person" role="listitem"><div><strong>Grigoris Velegkas</strong><span>Google Research</span></div></div>
+
           <div class="person" role="listitem"><div><strong>Grzegorz Głuch</strong><span>Massachusetts Institute of Technology</span></div></div>
           <div class="person" role="listitem"><div><strong>Justin Chen</strong><span>Massachusetts Institute of Technology</span></div></div>
+          <div class="person" role="listitem"><div><strong>Jeff Giliberti</strong><span>University of Maryland, College Park</span></div></div>
+
           <div class="person" role="listitem"><div><strong>Orr Paradise</strong><span>EPFL</span></div></div>
           <div class="person" role="listitem"><div><strong>Satchit Sivakumar</strong><span>Boston University</span></div></div>
           <div class="person" role="listitem"><div><strong>Sihan Liu</strong><span>University of California San Diego</span></div></div>
+
+          <div class="person" role="listitem"><div><strong>Tanapoom Laoaron</strong><span>University of Maryland, College Park</span></div></div>
           <div class="person" role="listitem"><div><strong>Changrui Mu</strong><span>Carnegie Mellon University</span></div></div>
-          <div class="person" role="listitem"><div><strong>Jeff Giliberti</strong><span>University of Maryland, College Park</span></div></div>
           <div class="person" role="listitem"><div><strong>Jonathan Shafer</strong><span>Massachusetts Institute of Technology</span></div></div>
+
           <div class="person" role="listitem"><div><strong>Elisaweta Masserova</strong><span>Carnegie Mellon University</span></div></div>
+          <div class="person" role="listitem"><div><strong>Iman Gholami</strong><span>University of Maryland, College Park</span></div></div>
+          <div class="person" role="listitem"><div><strong>Soheil Behnezhad</strong><span>Northeastern University</span></div></div>
         </div>
 
       </div>
     </section>
   </main>
+
+  <section class="sponsors" aria-label="Sponsors and acknowledgment">
+    <div class="sponsors-inner">
+      <a href="https://encore.ucsd.edu/" target="_blank" rel="noopener noreferrer">
+        <img src="https://encore.ucsd.edu/wp-content/uploads/2022/02/Encore-logo.png" alt="EnCORE Institute" style="height:44px;width:auto;">
+      </a>
+      <p>This workshop is supported by the <a href="https://encore.ucsd.edu/" target="_blank" rel="noopener noreferrer">EnCORE Institute</a> (NSF TRIPODS Phase II) and Google Research.</p>
+    </div>
+  </section>
 
   <footer>
     <div class="footer-inner">
