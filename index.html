@@ -342,6 +342,8 @@ r <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>
       background: var(--surface);
     }
     .schedule-table tr:last-child td{ border-bottom: 0; }
+    .row-break td { background: #fffbeb; }
+    .row-session td { background: #f0f7ff; }
     .time-range{
       font-family: var(--mono);
       font-size: 0.92rem;
@@ -468,27 +470,51 @@ r <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr class="row-break">
               <td class="time-range">8:15–9:00</td>
               <td>Breakfast</td>
             </tr>
             <tr>
-              <td class="time-range">9:00–11:35</td>
-              <td>Talks</td>
+              <td class="time-range">9:00–9:15</td>
+              <td>Welcome and Opening Remarks</td>
             </tr>
             <tr>
+              <td class="time-range">9:15–10:00</td>
+              <td>Shafi Goldwasser <em>(plenary)</em></td>
+            </tr>
+            <tr>
+              <td class="time-range">10:00–10:25</td>
+              <td>Vitaly Feldman</td>
+            </tr>
+            <tr class="row-break">
+              <td class="time-range">10:25–10:45</td>
+              <td>Coffee Break</td>
+            </tr>
+            <tr>
+              <td class="time-range">10:45–11:10</td>
+              <td>David Woodruff</td>
+            </tr>
+            <tr>
+              <td class="time-range">11:10–11:35</td>
+              <td>Elaine Shi</td>
+            </tr>
+            <tr class="row-break">
+              <td class="time-range">11:35–11:45</td>
+              <td>Break</td>
+            </tr>
+            <tr class="row-session">
               <td class="time-range">11:45–12:45</td>
               <td>Open Problem Discussion</td>
             </tr>
-            <tr>
+            <tr class="row-break">
               <td class="time-range">12:45–14:00</td>
               <td>Lunch Break</td>
             </tr>
-            <tr>
+            <tr class="row-session">
               <td class="time-range">14:00–15:30</td>
               <td>Problem Solving Session 1</td>
             </tr>
-            <tr>
+            <tr class="row-session">
               <td class="time-range">16:00–17:30</td>
               <td>Problem Solving Session 2</td>
             </tr>
@@ -506,27 +532,55 @@ r <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr class="row-break">
               <td class="time-range">8:15–9:00</td>
               <td>Breakfast</td>
             </tr>
             <tr>
-              <td class="time-range">9:00–12:30</td>
-              <td>Talks</td>
+              <td class="time-range">9:00–9:25</td>
+              <td>Kiarash Banihashem</td>
             </tr>
             <tr>
+              <td class="time-range">9:25–9:50</td>
+              <td>Satchit Sivakumar</td>
+            </tr>
+            <tr>
+              <td class="time-range">9:50–10:15</td>
+              <td>Manolis Zampetakis</td>
+            </tr>
+            <tr class="row-break">
+              <td class="time-range">10:15–10:35</td>
+              <td>Coffee Break</td>
+            </tr>
+            <tr>
+              <td class="time-range">10:35–11:00</td>
+              <td>Grigoris Velegkas</td>
+            </tr>
+            <tr>
+              <td class="time-range">11:00–11:25</td>
+              <td>Anay Mehrotra</td>
+            </tr>
+            <tr>
+              <td class="time-range">11:25–11:50</td>
+              <td>MohammadHossein Bateni</td>
+            </tr>
+            <tr>
+              <td class="time-range">11:50–12:30</td>
+              <td>Buffer / Discussion</td>
+            </tr>
+            <tr class="row-break">
               <td class="time-range">12:30–14:00</td>
               <td>Lunch Break</td>
             </tr>
-            <tr>
+            <tr class="row-session">
               <td class="time-range">14:00–15:30</td>
               <td>Problem Solving Session 1</td>
             </tr>
-            <tr>
+            <tr class="row-session">
               <td class="time-range">16:00–17:30</td>
               <td>Problem Solving Session 2</td>
             </tr>
-            <tr>
+            <tr class="row-break">
               <td class="time-range">Evening</td>
               <td>Workshop Dinner</td>
             </tr>
@@ -544,27 +598,51 @@ r <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr class="row-break">
               <td class="time-range">8:15–9:00</td>
               <td>Breakfast</td>
             </tr>
             <tr>
-              <td class="time-range">9:00–12:00</td>
-              <td>Talks</td>
+              <td class="time-range">9:00–9:25</td>
+              <td>Jessica Sorrell</td>
             </tr>
             <tr>
+              <td class="time-range">9:25–9:50</td>
+              <td>Justin Chen</td>
+            </tr>
+            <tr>
+              <td class="time-range">9:50–10:15</td>
+              <td>Elisaweta Masserova</td>
+            </tr>
+            <tr class="row-break">
+              <td class="time-range">10:15–10:35</td>
+              <td>Coffee Break</td>
+            </tr>
+            <tr>
+              <td class="time-range">10:35–11:00</td>
+              <td>Omar Montasser</td>
+            </tr>
+            <tr>
+              <td class="time-range">11:00–11:25</td>
+              <td>Soheil Behnezhad</td>
+            </tr>
+            <tr>
+              <td class="time-range">11:25–12:00</td>
+              <td>Buffer / Discussion</td>
+            </tr>
+            <tr class="row-session">
               <td class="time-range">12:00–12:30</td>
               <td>Open Problem Progress Report</td>
             </tr>
-            <tr>
+            <tr class="row-break">
               <td class="time-range">12:30–14:00</td>
               <td>Lunch Break</td>
             </tr>
-            <tr>
+            <tr class="row-session">
               <td class="time-range">14:00–15:30</td>
               <td>Problem Solving Session 2</td>
             </tr>
-            <tr>
+            <tr class="row-session">
               <td class="time-range">16:00–17:30</td>
               <td>Problem Solving Session 1</td>
             </tr>
